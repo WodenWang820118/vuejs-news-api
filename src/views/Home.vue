@@ -11,22 +11,26 @@
   </div>
   
   <div class="container-fluid">
-    <div class="row justify-content-center">
-        <router-link
-          v-for="newsPiece in newsCollection" :key="newsPiece.id"
-          :to="{ name:'NewsDetails', params:{ id: newsPiece.id }}"
-          class="card mt-3 mx-1" style="text-decoration: none; width: 18rem">
-          <img :src="newsPiece.urlToImage" alt="image link lost">
-          <h5 class="card-text">{{ newsPiece.title }}</h5>
-        </router-link>
-      </div>
+    <!-- <router-link
+      v-for="newsPiece in newsCollection" :key="newsPiece.id"
+      :to="{ name:'NewsDetails', params:{ id: newsPiece.id }}"
+      class="card mt-3 mx-1" style="text-decoration: none; width: 18rem">
+      <img :src="newsPiece.urlToImage" alt="image link lost">
+      <h5 class="card-text">{{ newsPiece.title }}</h5>
+    </router-link> -->
+    <NewsDetails :newsCollection="newsCollection" />   
   </div>
 </template>
 
 <script>
 // import news from '@/data/news.js'
 import axios from "axios"
+import NewsDetails from '@/components/NewsDetails'
 export default {
+  name: 'home',
+  components: {
+    NewsDetails
+  },
   data() {
     return {
       topic: 'Tesla',

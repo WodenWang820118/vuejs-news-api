@@ -1,8 +1,9 @@
 <template>
-  <div class="news-card">
-    <h1>{{ newsPiece.title }}</h1>
-    <p>{{ newsPiece.description }}</p>
-    <p>{{ newsPiece.url }}</p>
+  <div class="card mt-3 mx-1" style="width: 18rem">
+    <img :src="newsPiece.urlToImage" alt="image link lost">
+    <h5><a :href="newsPiece.url" target="_blank">{{ newsPiece.title }}</a></h5>
+    <!-- <p>{{ newsPiece.description }}</p>
+    <p>{{ newsPiece.url }}</p> -->
   </div>
 </template>
 
@@ -18,5 +19,11 @@ export default {
 </script>
 
 <style scoped>
-
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: brown;
+}
 </style>

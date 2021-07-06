@@ -8,12 +8,12 @@ const routes = [
     props: true,
     component: Home
   },
-  {
-    path: "/NewsDetails/:id",
-    name: "NewsDetails",
-    props: true,
-    component: () => import('@/views/NewsDetails')
-  }
+  // {
+  //   path: "/NewsDetails/:id",
+  //   name: "NewsDetails",
+  //   props: true,
+  //   component: () => import('@/views/NewsDetails')
+  // }
 ]
 
 const router = createRouter({
