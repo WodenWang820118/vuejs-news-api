@@ -11,7 +11,7 @@
           <router-link to="/" class="nav-link active" aria-current="page">首頁</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">其他連結</a>
+          <a class="nav-link" href="#">關於</a>
         </li>
       </ul>
     </div>
