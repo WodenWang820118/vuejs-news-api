@@ -1,28 +1,22 @@
 <template>
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="card h-100 shadow-sm mt-3 mx-1" v-for="(newsPiece, index) in newsCollection" :key="index">
-        <!-- image can toggle description -->
-        <img :src="newsPiece.urlToImage" alt="image link lost" data-bs-toggle="collapse"
-          :data-bs-target="'#collapseImage'+index">
-        <!-- title -->
+    <div class="row justify-content-center" data-masonry='{"percentPosition": true }'>
+      <!-- TODO: the responsiveness is not quite good -->
+      <div class="col-lg-3 col-md-4 col-sm-col" v-for="(newsPiece, index) in newsCollection" :key="index">
+        <div class="card shadow-sm mt-3 mx-1">
+        <img :src="newsPiece.urlToImage" alt="image link lost">
         <h5><a :href="newsPiece.url" target="_blank">{{ newsPiece.title }}</a></h5>
-        <!-- toggle content from image -->
-        <div class="collapse" :id="'collapseImage'+index">
-          <div class="card-body-noborder">
-            <!-- {{ newsPiece.description }} -->
-            <span v-html="newsPiece.description"></span>
-          </div>
-        </div>
         <div class="card-footer">
           {{ newsPiece.publishedAt.replace('T',' ').replace('Z','') }}
         </div>
+      </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Masonry from "masonry-layout"
   export default {
     name: 'NewsDetails',
     props: {
@@ -31,17 +25,20 @@
         required: true
       }
     },
+    mounted() {
+      var row = document.querySelector("[data-masonry]");
+      new Masonry(row, {
+        // options
+        percentPosition: true,
+    });
+    }
   }
 </script>
 
 <style scoped>
-
 .card {
   width: 13rem; 
   border-radius:10px;
-}
-.row {
-  padding: 0 15%;
 }
 h5 {
   font-size: 1rem;
