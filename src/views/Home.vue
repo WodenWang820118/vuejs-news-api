@@ -1,5 +1,6 @@
 <template>
-<br/>
+<div>
+  <br/>
   <div class="input-group">
     <input v-model="topic" type="search" class="form-control rounded" aria-label="Search"
       aria-describedby="search-addon" />
@@ -26,6 +27,7 @@
   </div>
 </div>
   <NewsDetails :newsCollection="newsCollection" /> 
+</div>
 </template>
 
 <script>
@@ -77,7 +79,7 @@ export default {
     }
   },
   mounted() {
-    this.fetchNews()
+    this.fetchNews();
   }
 }
 </script>

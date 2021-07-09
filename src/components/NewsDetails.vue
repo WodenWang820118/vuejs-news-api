@@ -1,9 +1,8 @@
 <template>
   <div class="container">
     <div class="row justify-content-center" data-masonry='{"percentPosition": true }'>
-      <!-- TODO: the responsiveness is not quite good -->
       <div class="col-lg-3 col-md-4 col-sm-col" v-for="(newsPiece, index) in newsCollection" :key="index">
-        <div class="card shadow-sm mt-3 mx-1">
+        <div class="grid-item card shadow-sm mt-3 mx-1">
         <img :src="newsPiece.urlToImage" alt="image link lost">
         <h5><a :href="newsPiece.url" target="_blank">{{ newsPiece.title }}</a></h5>
         <div class="card-footer">
@@ -17,6 +16,7 @@
 
 <script>
 import Masonry from "masonry-layout"
+import imagesLoaded from 'imagesloaded'
   export default {
     name: 'NewsDetails',
     props: {
@@ -25,40 +25,43 @@ import Masonry from "masonry-layout"
         required: true
       }
     },
+    methods: {
+      createMasonry() {
+        // reference: imagesLoaded: https://github.com/desandro/imagesloaded
+        // reference: possible item elements overlap: https://masonry.desandro.com/layout.html#imagesloaded
+        var row = document.querySelector("[data-masonry]");
+        new imagesLoaded(row,()=> {
+          new Masonry(row, {
+            percentPosition: true
+          })
+        })
+      }
+    },
     mounted() {
-      var row = document.querySelector("[data-masonry]");
-      new Masonry(row, {
-        // options
-        percentPosition: true,
-    });
+      this.createMasonry();
     }
   }
 </script>
 
 <style scoped>
-.card {
-  width: 13rem; 
-  border-radius:10px;
+.container {
+  padding: 0 10%;
 }
 h5 {
   font-size: 1rem;
 }
+.card {
+  padding: 1%;
+}
 .card-footer {
   font-size: 1rem;
 }
-
-@media screen and (max-width:600px) {
-  .card {
-    width: 20rem;
-    border-radius:10px;
-  }
-  h5 {
-    font-size: 1.2rem;
-  }
+.grid-item {
+  place-self: center;
+  border-radius:10px;
 }
 img {
-  margin-top: 5px;
-  margin-bottom: 3px;
+  margin: 5px 5px;
   border-radius: 10px;
 }
 

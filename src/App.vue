@@ -1,9 +1,9 @@
 <template>
-  <TheNavigation />
-  <div class="content-container">
+  <div>
+    <TheNavigation />
     <router-view />
-  </div>
   <Footer />
+  </div>
 </template>
 
 <script>

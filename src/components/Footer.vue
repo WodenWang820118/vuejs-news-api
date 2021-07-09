@@ -1,5 +1,6 @@
 <template>
-<div class="footer d-sm-flex justify-content-evenly align-items-center">
+<div>
+  <div class="footer d-sm-flex justify-content-evenly align-items-center">
   <TheAccordion :accordionCollection="accordionCollection" />
   <div>
     <div
@@ -19,6 +20,7 @@
     <li><a><i class="fab fa-facebook-square fa-5x"></i></a></li>
   </ul>
   <p>Copyright <i class="far fa-copyright"></i> GuanXinTech. All Rights Reserved  </p>
+</div>
 </div>
 </template>
 

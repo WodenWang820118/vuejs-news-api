@@ -4744,7 +4744,7 @@
   "resolved" "https://registry.npm.taobao.org/ignore/download/ignore-4.0.6.tgz"
   "version" "4.0.6"
 
-"imagesloaded@4.1.4":
+"imagesloaded@^4.1.4", "imagesloaded@4.1.4":
   "integrity" "sha512-ltiBVcYpc/TYTF5nolkMNsnREHW+ICvfQ3Yla2Sgr71YFwQ86bDwV9hgpFhFtrGPuwEx5+LqOHIrdXBdoWwwsA=="
   "resolved" "https://registry.npmjs.org/imagesloaded/-/imagesloaded-4.1.4.tgz"
   "version" "4.1.4"
@@ -5211,6 +5211,18 @@
   "integrity" "sha1-J8dlOb4U2L0Sghmi1zGwkzeQTnk="
   "resolved" "https://registry.nlark.com/javascript-stringify/download/javascript-stringify-2.1.0.tgz"
   "version" "2.1.0"
+
+"jquery-bridget@^3.0.0":
+  "integrity" "sha512-UamdtgKjbmSUiLfUbJk+VA5q9fMRy4h2XYU1D1OlF2wzI1wIQyuIb7WTYtaMPYML2RgdAOTPyvQUmehWwoXazw=="
+  "resolved" "https://registry.npmjs.org/jquery-bridget/-/jquery-bridget-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "jquery" ">=1.4.2 <4"
+
+"jquery@^3.6.0", "jquery@>=1.4.2 <4":
+  "integrity" "sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw=="
+  "resolved" "https://registry.npmjs.org/jquery/-/jquery-3.6.0.tgz"
+  "version" "3.6.0"
 
 "js-message@1.0.7":
   "integrity" "sha1-+93QU8ekcCGHG7iyyVOXzBfCDkc="
