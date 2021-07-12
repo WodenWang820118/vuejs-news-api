@@ -29,7 +29,7 @@
   <NewsDetails :newsCollection="newsCollection" /> 
 </div>
 <!-- <div class="no-news" v-show="newsCollection.length == 0"> 抱歉，沒有找到新聞 </div> -->
-<div class="no-news" v-show="noNews"> 抱歉，沒有找到新聞 </div>
+<div class="no-news" v-show="newsCollection.length==0"> 抱歉，沒有找到新聞 </div>
 </template>
 
 <script>
@@ -79,22 +79,14 @@ export default {
         }
       }
       // console.log(this.newsCollection)
-    },
-    noNewsExist() {
-      setTimeout(()=>{
-        if (this.newsCollection.length == 0) {
-          this.noNews = true
-        } else {
-          this.noNews = false
-        }
-      },2000)
     }
   },
-  mounted() {
+    mounted() {
     this.fetchNews();
-  },
-  updated() {
-    this.noNewsExist();
+  // },
+  // updated() {
+  //   this.noNewsExist();
+  // }
   }
 }
 </script>
