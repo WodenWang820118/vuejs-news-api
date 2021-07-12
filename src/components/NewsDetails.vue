@@ -5,7 +5,7 @@
         <div class="grid-item card shadow-sm mt-3 mx-1">
         <img :src="newsPiece.urlToImage" alt="image link lost">
         <h5><a :href="newsPiece.url" target="_blank">{{ newsPiece.title }}</a></h5>
-        <div class="card-footer">
+        <div class="card-footer" style="font-family: 'Roboto', sans-serif">
           {{ newsPiece.publishedAt.replace('T',' ').replace('Z','') }}
         </div>
       </div>
@@ -37,9 +37,12 @@ import imagesLoaded from 'imagesloaded'
         })
       }
     },
-    mounted() {
+    // The updated hook runs after data changes on your component and the DOM re-renders.
+    // Use updated if you need to access the DOM after a property change:
+    // https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle
+    updated() {
       this.createMasonry();
-    }
+    },
   }
 </script>
 
@@ -48,13 +51,13 @@ import imagesLoaded from 'imagesloaded'
   padding: 0 10%;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .card {
   padding: 1%;
 }
 .card-footer {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 .grid-item {
   place-self: center;

@@ -6,14 +6,14 @@ const routes = [
     path: "/",
     name: "home",
     props: true,
-    component: Home
+    component: Home,
   },
-  // {
-  //   path: "/NewsDetails/:id",
-  //   name: "NewsDetails",
-  //   props: true,
-  //   component: () => import('@/views/NewsDetails')
-  // }
+  {
+    path: "/About",
+    name: "about",
+    props: true,
+    component: () => import('@/views/About')
+  }
 ]
 
 const router = createRouter({

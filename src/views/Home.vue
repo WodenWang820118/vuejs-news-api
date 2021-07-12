@@ -2,7 +2,7 @@
 <div>
   <br/>
   <div class="input-group">
-    <input v-model="topic" type="search" class="form-control rounded" aria-label="Search"
+    <input @keypress="fetchNews" v-model="topic" type="search" class="form-control rounded" aria-label="Search"
       aria-describedby="search-addon" />
     <button @click="fetchNews" type="button" class="btn btn-outline-primary">search</button>
   </div>
@@ -11,7 +11,7 @@
     <div class="col-lg-3"></div> <!-- for laying language-options and filter-options centered -->
     <div class="language-options col-lg-3 col-6 d-flex justify-content-center"> 
       <div v-for="option in languageOptions" :key="option.id" class="language-options">
-        <input type="radio"  v-model="language" name="language" :value="option.language">
+        <input type="radio" v-model="language" name="language" :value="option.value">
         <label style="margin-right:3px;"> {{ option.language }} </label>
       </div>
     </div>
@@ -28,6 +28,8 @@
 </div>
   <NewsDetails :newsCollection="newsCollection" /> 
 </div>
+<!-- <div class="no-news" v-show="newsCollection.length == 0"> 抱歉，沒有找到新聞 </div> -->
+<div class="no-news" v-show="noNews"> 抱歉，沒有找到新聞 </div>
 </template>
 
 <script>
@@ -43,18 +45,19 @@ export default {
   },
   data() {
     return {
-      topic: '柯文哲',
-      language:'預設(全)',
-      sortBySelected:'popularity',
+      topic: '台灣 熱門新聞',
+      language:'',
+      sortBySelected:'relevency',
       languageOptions: languageOptions.options,
       sortedBy: sortBySelected.options,
+      noNews: false,
       newsCollection: []
     }
   },
   methods: {
     async fetchNews() {
       try {
-        const url = `https://newsapi.org/v2/everything?sortBy=relevancy&q=${this.topic}&apiKey=${process.env.VUE_APP_TAIWAN_NEWS_API_KEY}`
+        const url = `https://newsapi.org/v2/everything?sortBy=${this.sortBySelected}&q=${this.topic}&language=${this.language}&apiKey=${process.env.VUE_APP_TAIWAN_NEWS_API_KEY}`
         const response = await axios.get(url)
         const results = response.data.articles
         this.newsCollection = results.map((news, index) => ({
@@ -76,10 +79,22 @@ export default {
         }
       }
       // console.log(this.newsCollection)
+    },
+    noNewsExist() {
+      setTimeout(()=>{
+        if (this.newsCollection.length == 0) {
+          this.noNews = true
+        } else {
+          this.noNews = false
+        }
+      },2000)
     }
   },
   mounted() {
     this.fetchNews();
+  },
+  updated() {
+    this.noNewsExist();
   }
 }
 </script>
@@ -90,6 +105,12 @@ export default {
 }
 h6 {
   vertical-align: middle;
+}
+
+.no-news {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0 2%;
 }
 @media screen and (max-width:600px) {
   .input-group {

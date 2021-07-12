@@ -1,8 +1,18 @@
 <template>
   <div>
     <TheNavigation />
-    <router-view />
-  <Footer />
+    <!-- <router-view /> -->
+    <router-view v-slot="{ Component }">
+      <!-- use the CDN animate.css/3.7.2-->
+      <!-- other libraries: https://learnvue.co/2020/01/9-vue-input-libraries-to-power-up-your-forms/ -->
+      <transition
+      enter-active-class="animated fadeIn zoomIn" 
+      leave-active-class="animated fadeOut zoomOut"
+        >
+        <component :is="Component" />
+      </transition>
+      <Footer />
+    </router-view>
   </div>
 </template>
 
