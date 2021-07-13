@@ -12,7 +12,7 @@ The website is developed with Vue 3 and Bootstrap 5. The description here would 
 
 ## Illustration
 ### Large screen
-![Imgur](https://i.imgur.com/VB8LjrJm.png)
+![Imgur](https://i.imgur.com/VB8LjrJl.png)
 
 ## Steps
 The steps here specify the order of the development.
