@@ -3,8 +3,8 @@
 <div>
   <br/>
   <div class="input-group">
-    <!-- two behaviours would trigger the fetchNews() function, which are keypress,and click the search button -->
-    <input @keypress="fetchNews" v-model="topic" type="search" class="form-control rounded" aria-label="Search"
+    <!-- one behaviour would trigger the fetchNews() function, which is clicking the search button -->
+    <input v-model="topic" type="search" class="form-control rounded" aria-label="Search"
       aria-describedby="search-addon" />
     <button @click="fetchNews" type="button" class="btn btn-outline-primary">search</button>
   </div>
