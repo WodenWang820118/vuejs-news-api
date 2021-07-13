@@ -14,15 +14,15 @@ The website is developed with Vue 3 and Bootstrap 5. The description here would 
 ### Large screen
 ![Imgur](https://i.imgur.com/VB8LjrJl.png)
 
-Figure 1 main page with masonry cards, search bar and filter options
+<p align="center"> **Figure 1** main page with masonry cards, search bar and filter options</p>
 
 ![Imgur](https://i.imgur.com/2F0Xp2Sl.png)
 
-Figure 2 footer
+<p align="center"> **Figure 2** footer</p>
 
 ![Imgur](https://i.imgur.com/3ZgKAjll.png)
 
-Figure 3 about
+<p align="center">**Figure 3** about</p>
 
 ### Small screen
 
