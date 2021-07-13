@@ -25,17 +25,13 @@ Figure 2 footer
 Figure 3 about
 
 ### Small screen
-![Imgur](https://i.imgur.com/AxSStxrm.png)
+<p float="middle">
+  ![Imgur](https://i.imgur.com/AxSStxrm.png)
+  ![Imgur](https://i.imgur.com/NHAISiCm.png)
+  ![Imgur](https://i.imgur.com/UZGrJQdm.png)
+</p>
 
-Figure 4 small screen, toggleable nav-bar, responsive search bar, filters
-
-![Imgur](https://i.imgur.com/NHAISiCm.png)
-
-Figure 5 small screen footer
-
-![Imgur](https://i.imgur.com/UZGrJQdm.png)
-
-Figure 6 small screen about and description
+Figure 4 small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description
 
 
 
