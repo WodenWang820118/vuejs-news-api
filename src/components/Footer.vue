@@ -1,26 +1,32 @@
+<!-- The footer here incorporates the accordion and the mapbox for service location  -->
 <template>
 <div>
+  <!-- the idea here is putting accordion and mapbox into two columns, using smartphone would render the layout into one column only -->
   <div class="footer d-sm-flex justify-content-evenly align-items-center">
-  <TheAccordion :accordionCollection="accordionCollection" />
-  <div>
-    <div
-      id="map"
-      style=
-        "width: 440px;
-        height: 300px;
-        border-radius:10px;
-        z-index:1000;"
-      >
-    </div> 
+    <!-- passing a prop called accordionCollection and passing the data returned from the script -->
+    <TheAccordion :accordionCollection="accordionCollection" />
+    <div>
+      <!-- the width and height could only be specified here, custome CSS won't work -->
+      <div
+        id="map"
+        style=
+          "width: 440px;
+          height: 300px;
+          border-radius:10px;
+          z-index:1000;"
+        >
+      </div> 
+    </div>
   </div>
-</div>
-<div class="icons-copyright">
-  <ul class="social-icons">
-    <li><a><i class="fab fa-linkedin fa-5x"></i></a></li>
-    <li><a><i class="fab fa-facebook-square fa-5x"></i></a></li>
-  </ul>
-  <p>Copyright <i class="far fa-copyright"></i> GuanXinTech. All Rights Reserved  </p>
-</div>
+  <!-- the icons are from font awesome-->
+  <!-- details regarding CSS are provided below -->
+  <div class="icons-copyright">
+    <ul class="social-icons">
+      <li><a><i class="fab fa-linkedin fa-5x"></i></a></li>
+      <li><a><i class="fab fa-facebook-square fa-5x"></i></a></li>
+    </ul>
+    <p>Copyright <i class="far fa-copyright"></i> GuanXinTech. All Rights Reserved  </p>
+  </div>
 </div>
 </template>
 
@@ -31,11 +37,17 @@ import mapboxgl from "mapbox-gl"
 export default {
   data() {
     return {
+      // the information retrieved from data/accordionData.js
       accordionCollection: accordionData.accordionCollection,
+      // please apply and use your own token
       accessToken: "pk.eyJ1IjoiZ3VhbnhpbiIsImEiOiJja3F0M2kxaHAxaDRzMnBxYW5xeXlxMnFqIn0.UW8BxbXuknmnKPND8oPctw"
     }
   },
   methods: {
+    /**
+     * The method instantiates the map instance.
+     * could add more features such as navigation bar, language switching
+     */
     createMap() {
       mapboxgl.accessToken = this.accessToken;
       // init the map

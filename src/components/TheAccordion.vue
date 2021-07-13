@@ -1,6 +1,9 @@
+<!-- Using bootstrap 5, accordion is easy to create -->
+<!-- see details: https://getbootstrap.com/docs/5.0/components/accordion/ -->
 <template>
   <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accoridon-item" v-for="(accordion,index) in accordionCollection" :key="index">
+      <!-- the id here needs to bind the index to toggle single accordion -->
       <h2 class="accordion-header" :id="'flush-heading'+index">
         <button
           class="accordion-button collapsed"
@@ -26,6 +29,9 @@
 <script>
 export default {
   props: {
+    /**
+     * the accordionCollection is passed from Footer.vue
+     */
     accordionCollection: {
       type: Array,
       required: true

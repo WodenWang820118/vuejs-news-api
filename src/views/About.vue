@@ -1,23 +1,28 @@
+<!-- Using Bootstrap 5, the developer's information could be responsive -->
 <template>
 <div class="container">
+  <!-- news feature in Bootstrap 5, column would change to another row if column more than 1 (accommodate 1 column in a row) -->
+  <!-- here I use 4 col-lg-3 with larger screen; other situations, 2 col -->
   <div class="row justify-content-center row-cols-1">
     <div class="col-lg-3"></div>
     <figure class="selfie col-lg-3 col d-flex justify-content-center">
-    <img
-      class="img-thumbnail"
-      style="height:200px; width:200px;overflow:hidden;"
-      :src="picture"
-      :alt="`${firstName} ${lastName}`"
-      @click="getUser">
-  </figure>
-  <div class="col-lg-3 col description">
-    <h1>{{firstName}} {{lastName}}</h1>
-    <!-- <h3>Email: {{email}}</h3> -->
-    <p>這是一個簡易的新聞搜尋網站。透過關鍵字、語言、排列選項，可以篩選出最符合條件的二十則新聞。
-      有趣的是，點選上方的圖片，開發者的大頭照與名字都會更換。網站是響應式的，可在平板及手機上操作。
-    </p>
-  </div>
-  <div class="col-lg-3"></div>
+      <!-- the selfie here is fixed size, otherwise get oval in smaller screens -->
+      <img
+        class="img-thumbnail"
+        style="height:200px; width:200px;overflow:hidden;"
+        :src="picture"
+        :alt="`${firstName} ${lastName}`"
+        @click="getUser">
+    </figure>
+    <div class="col-lg-3 col description">
+      <h1>{{firstName}} {{lastName}}</h1>
+      <!-- <h3>Email: {{email}}</h3> -->
+      <!-- descriptions below, change if you like -->
+      <p>這是一個簡易的新聞搜尋網站。透過關鍵字、語言、排列選項，可以篩選出最符合條件的二十則新聞。
+        有趣的是，點選上方的圖片，開發者的大頭照與名字都會更換。網站是響應式的，可在平板及手機上操作。
+      </p>
+    </div>
+    <div class="col-lg-3"></div>
   </div>
 </div>
 </template>
@@ -34,6 +39,9 @@ export default {
     }
   },
   methods: {
+    /**
+     * fectching the random-generated developer information
+     */
     async getUser() {
     const res = await fetch('https://randomuser.me/api')
     const { results } = await res.json()
