@@ -38,7 +38,8 @@ The website is developed with Vue 3 and Bootstrap 5. The description here would 
     <td><img src="https://i.imgur.com/UZGrJQd.png" width=300 height=350></td>
   </tr>
  </table>
-<p align="center"> Figure 4 small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description</p>
+ 
+**Figure 4** small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description
 
 
 
