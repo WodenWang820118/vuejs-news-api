@@ -27,10 +27,10 @@ Figure 3 about
 ### Small screen
 
 <table>
-  <tr>
-    <td style="text-align: center; vertical-align: middle;">Toggleable nav-bar search bar, filter, news card</td>
-    <td style="text-align: center; vertical-align: middle;">Accordion, mapbox, and social icons</td>
-    <td style="text-align: center; vertical-align: middle;">About</td>
+  <tr align="center">
+    <td>Toggleable nav-bar search bar, filter, news card</td>
+    <td>Accordion, mapbox, and social icons</td>
+    <td>About</td>
   </tr>
   <tr>
     <td><img src="https://i.imgur.com/AxSStxr.png" width=300 height=350></td>
