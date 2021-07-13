@@ -38,7 +38,7 @@ The website is developed with Vue 3 and Bootstrap 5. The description here would 
     <td><img src="https://i.imgur.com/UZGrJQd.png" width=300 height=350></td>
   </tr>
  </table>
- 
+
 **Figure 4** small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description
 
 
@@ -56,7 +56,7 @@ The Home view would be the main page showing the news card. To change among diff
 The navigation bar aims to change views. Here I provide the ``` About.vue ``` for illustrating the changing view between Home and About.
 
 ### Step 4: Footer.vue, TheAccordion.vue
-The footer would be the extra information that the users might want to know. Here you can also provide the contact information or service information regarding the social media link. The accordion provides the FAQs if users are interested.
+The footer would be the extra information that the users might want to know. Here you can also provide the contact information or service information with the social media link. The accordion provides the FAQs if users are interested.
 
 ### Step 5: About.vue
 The section here is regarding the developer's information or description. I make it random-generated when routing to the view. 
