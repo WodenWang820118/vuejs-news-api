@@ -33,9 +33,9 @@ Figure 3 about
     <td>About</td>
   </tr>
   <tr>
-    <td><img src="https://i.imgur.com/AxSStxr.png" width=300 height=400></td>
-    <td><img src="https://i.imgur.com/NHAISiC.png" width=300 height=400></td>
-    <td><img src="https://i.imgur.com/UZGrJQd.png" width=300 height=400></td>
+    <td><img src="https://i.imgur.com/AxSStxr.png" width=300 height=350></td>
+    <td><img src="https://i.imgur.com/NHAISiC.png" width=300 height=350></td>
+    <td><img src="https://i.imgur.com/UZGrJQd.png" width=300 height=350></td>
   </tr>
  </table>
 Figure 4 small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description
