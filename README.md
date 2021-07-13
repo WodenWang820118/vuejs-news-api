@@ -14,15 +14,15 @@ The website is developed with Vue 3 and Bootstrap 5. The description here would 
 ### Large screen
 ![Imgur](https://i.imgur.com/VB8LjrJl.png)
 
-<p align="center"> **Figure 1** main page with masonry cards, search bar and filter options</p>
+**Figure 1** main page with masonry cards, search bar and filter options
 
 ![Imgur](https://i.imgur.com/2F0Xp2Sl.png)
 
-<p align="center"> **Figure 2** footer</p>
+**Figure 2** footer
 
 ![Imgur](https://i.imgur.com/3ZgKAjll.png)
 
-<p align="center">**Figure 3** about</p>
+**Figure 3** about
 
 ### Small screen
 
@@ -38,7 +38,7 @@ The website is developed with Vue 3 and Bootstrap 5. The description here would 
     <td><img src="https://i.imgur.com/UZGrJQd.png" width=300 height=350></td>
   </tr>
  </table>
-Figure 4 small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description
+<p align="center"> Figure 4 small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description</p>
 
 
 
