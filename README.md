@@ -28,23 +28,16 @@ Figure 3 about
 
 <table>
   <tr>
-    <td>First Screen Page</td>
-    <td>Holiday Mention</td>
-    <td>Present day in purple and selected day in pink</td>
+    <td>Toggleable nav-bar search bar, filter, news card</td>
+    <td>Accordion, mapbox, and social icons</td>
+    <td>About</td>
   </tr>
   <tr>
-    <td><img src="https://i.imgur.com/AxSStxr.png" width=270 height=480></td>
-    <td><img src="https://i.imgur.com/NHAISiC.png" width=270 height=480></td>
-    <td><img src="https://i.imgur.com/UZGrJQd.png" width=270 height=480></td>
+    <td><img src="https://i.imgur.com/AxSStxr.png" width=270 height=450></td>
+    <td><img src="https://i.imgur.com/NHAISiC.png" width=270 height=450></td>
+    <td><img src="https://i.imgur.com/UZGrJQd.png" width=270 height=450></td>
   </tr>
  </table>
-
-<p float="middle">
-  ![Imgur](https://i.imgur.com/AxSStxrm.png)
-  ![Imgur](https://i.imgur.com/NHAISiCm.png)
-  ![Imgur](https://i.imgur.com/UZGrJQdm.png)
-</p>
-
 Figure 4 small screen, toggleable nav-bar, responsive search bar, filters options, footer, about, description
 
 
