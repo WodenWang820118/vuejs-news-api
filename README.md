@@ -1,4 +1,4 @@
-# news-api-website
+# News-api-website
 The website is developed with Vue 3 and Bootstrap 5. The description here would illustrate the steps I did for creating the website. Note that newsapi only serves in developer mode, i.e., using localhost. The API won't work when into production. For deploying the website, I would recommend using GNews API.
 
 ## Usage:
