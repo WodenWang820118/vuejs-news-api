@@ -3,7 +3,7 @@ The website is developed with Vue 3 and Bootstrap 5. The description here would 
 
 ## Usage:
 1. git clone the repository.
-2. apply for the API key and put it in your ```env.``` file.
+2. apply for the ```newsapi``` API key and put it in your ```env.``` file. Update the variable inside ``` Home.vue ```.
 3. use the command ``` npm run serve ```
 
 ## For API details:
@@ -25,15 +25,15 @@ Figure 2 footer
 Figure 3 about
 
 ### Small screen
-![Imgur](https://i.imgur.com/AxSStxrl.png)
+![Imgur](https://i.imgur.com/AxSStxrm.png)
 
 Figure 4 small screen, toggleable nav-bar, responsive search bar, filters
 
-![Imgur](https://i.imgur.com/NHAISiCl.png)
+![Imgur](https://i.imgur.com/NHAISiCm.png)
 
 Figure 5 small screen footer
 
-![Imgur](https://i.imgur.com/UZGrJQdl.png)
+![Imgur](https://i.imgur.com/UZGrJQdm.png)
 
 Figure 6 small screen about and description
 
