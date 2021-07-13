@@ -25,6 +25,20 @@ Figure 2 footer
 Figure 3 about
 
 ### Small screen
+
+<table>
+  <tr>
+    <td>First Screen Page</td>
+    <td>Holiday Mention</td>
+    <td>Present day in purple and selected day in pink</td>
+  </tr>
+  <tr>
+    <td><img src="https://i.imgur.com/AxSStxr.png" width=270 height=480></td>
+    <td><img src="https://i.imgur.com/NHAISiC.png" width=270 height=480></td>
+    <td><img src="https://i.imgur.com/UZGrJQd.png" width=270 height=480></td>
+  </tr>
+ </table>
+
 <p float="middle">
   ![Imgur](https://i.imgur.com/AxSStxrm.png)
   ![Imgur](https://i.imgur.com/NHAISiCm.png)
